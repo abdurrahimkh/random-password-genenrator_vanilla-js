@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1c1c1c;
+  font-family: "Karla", sans-serif;
+}
+.container {
+  background: #1f2937;
+  width: 80vw;
+  padding: 8rem 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid gray;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  white-space: nowrap;
+}
+
+span {
+  display: block;
+  color: #4adf86;
+  white-space: pre-wrap;
+}
+
+p {
+  color: #d5d4d8;
+  margin-top: 0.5rem;
+}
+
+button {
+  background: #10b981;
+  padding: 0.5rem;
+  margin-top: 3rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.border {
+  border-bottom: 2px solid #2f3e53;
+  margin-top: 2rem;
+}
+
+.password {
+  margin-top: 3rem;
+  display: flex;
+  gap: 4rem;
+}
+
+.box {
+  background: #273549;
+  width: 20rem;
+  height: 2rem;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy-icon1,
+.copy-icon2 {
+  color: white;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  background: #4adf86;
+}
+
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background: #4adf86;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 2px;
+  padding: 0.5rem;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+}
+
+#toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .box {
+    width: 15rem;
+  }
+  .password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .box {
+    width: 15rem;
+  }
+  .password {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
